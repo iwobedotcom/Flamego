@@ -4,11 +4,9 @@ import { v4 as uuidv4 } from "uuid";
 import {
   MdDelete,
   MdDownload,
-  MdDownloadForOffline,
   MdOutlineDataSaverOff,
   MdSave,
 } from "react-icons/md";
-import { AiTwotoneDelete, AiTwotoneSave } from "react-icons/ai";
 import { BsFillArrowDownRightSquareFill } from "react-icons/bs";
 import { client, urlFor } from "../client";
 import { fetchUser } from "../utils/fetchUser";
@@ -93,8 +91,7 @@ function Pin({ pin: { postedBy, image, _id, destination, save } }) {
                   <MdOutlineDataSaverOff />
                 </a>
               ) : (
-                <a
-                  href={`${image?.asset?.url}?dl=`}
+                <button
                   onClick={(e) => {
                     e.stopPropagation();
                     savePin(_id);
@@ -104,7 +101,7 @@ function Pin({ pin: { postedBy, image, _id, destination, save } }) {
                   title="Save"
                 >
                   <MdSave />
-                </a>
+                </button>
               )}
             </div>
             <div className="flex justify-between items-center gap-2 w-full">
@@ -122,18 +119,17 @@ function Pin({ pin: { postedBy, image, _id, destination, save } }) {
                 </a>
               )}
               {postedBy?._id === user.googleId && (
-                <a
-                  href={`${image?.asset?.url}?dl=`}
+                <button
                   onClick={(e) => {
                     e.stopPropagation();
                     deletePin(_id);
                   }}
                   type="button"
                   className="bg-white w-9 h-9 rounded-full flex items-center justify-center text-pink-700 text-md opacity-75 hover:opacity-100 hover:shadow-md outline-none"
-                  title="Save"
+                  title="Delete"
                 >
                   <MdDelete />
-                </a>
+                </button>
               )}
             </div>
           </div>
