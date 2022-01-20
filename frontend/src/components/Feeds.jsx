@@ -30,6 +30,13 @@ function Feeds() {
     return <Spinner message="Adding new ideas to your feed!" />;
   }
 
+  if (!pins?.length)
+    return (
+      <h2 className="flex flex-col justify-center items-center">
+        Sorry no pins available.
+      </h2>
+    );
+
   return <div>{pins && <MasonryLayout pins={pins} />}</div>;
 }
 
