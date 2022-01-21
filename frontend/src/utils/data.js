@@ -30,10 +30,6 @@ export const categories = [
     image: "https://picsum.photos/id/1011/640/974",
   },
   {
-    name: "travel",
-    image: "https://picsum.photos/id/177/640/974",
-  },
-  {
     name: "spirituality",
     image: "https://picsum.photos/id/139/640/974",
   },
