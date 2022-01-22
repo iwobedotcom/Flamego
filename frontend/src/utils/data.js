@@ -34,6 +34,10 @@ export const categories = [
     image: "https://picsum.photos/id/139/640/974",
   },
   {
+    name: "sports",
+    image: "https://picsum.photos/id/1058/640/974",
+  },
+  {
     name: "others",
     image: "https://picsum.photos/id/248/640/974",
   },

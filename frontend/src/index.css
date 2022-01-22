@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Work Sans", Arial, sans-serif;
 }
 
 .hide-scrollbar::-webkit-scrollbar {

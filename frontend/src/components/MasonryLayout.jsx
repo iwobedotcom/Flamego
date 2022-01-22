@@ -5,8 +5,8 @@ import Pin from "./Pin";
 
 const breakpointObj = {
   default: 4,
-  3000: 6,
-  2000: 5,
+  3000: 4,
+  2000: 3,
   1200: 3,
   1000: 2,
   500: 1,
