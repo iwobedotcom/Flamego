@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineCloudUpload } from "react-icons/ai";
-import { MdDelete } from "react-icons/md";
+import { AiOutlineDelete } from "react-icons/ai";
 
 import { client } from "../client";
 import { Spinner } from "../components";
@@ -85,7 +85,7 @@ function CreatePin({ user }) {
   return (
     <div className="flex flex-col justify-center items-center mt-5 lg:h-4/5">
       {fields && (
-        <p className="text-red-500 mb-5 text-xl transition-all duration-150 ease-in">
+        <p className="text-red-600 mb-5 text-xl transition-all duration-150 ease-in">
           Please fill in all the fields.
         </p>
       )}
@@ -123,10 +123,10 @@ function CreatePin({ user }) {
                 />
                 <button
                   type="button"
-                  className="absolute bottom-3 right-3 p-3 rounded-full bg-white text-xl cursor-pointer outline-none text-pink-700 hover:shadow-md transition-all duration-500 ease-in-out"
+                  className="absolute bottom-3 right-3 p-3 rounded-full bg-transparent text-xl cursor-pointer outline-none text-black hover:shadow-md transition-all duration-500 ease-in-out"
                   onClick={() => setImageAsset(null)}
                 >
-                  <MdDelete />
+                  <AiOutlineDelete />
                 </button>
               </div>
             )}
@@ -180,7 +180,7 @@ function CreatePin({ user }) {
               <button
                 type="button"
                 onClick={savePin}
-                className="bg-pink-600 text-white font-bold p-2 rounded-full w-28 outline-none"
+                className="bg-red-600 text-white font-bold p-2 w-28 outline-none"
               >
                 Save Pin
               </button>
