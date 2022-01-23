@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { MdDownloadForOffline } from "react-icons/md";
+import { BsDownload } from "react-icons/bs";
 import { Link, useParams } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
@@ -68,11 +68,11 @@ function PinDetail({ user }) {
       {pinDetail && (
         <div
           className="flex xl:flex-row flex-col m-auto bg-white"
-          style={{ maxWidth: "1500px", borderRadius: "32px" }}
+          style={{ maxWidth: "1500px", borderRadius: "0px" }}
         >
           <div className="flex justify-center items-center md:items-start flex-initial">
             <img
-              className="rounded-t-3xl rounded-b-lg"
+              className=""
               src={pinDetail?.image && urlFor(pinDetail?.image).url()}
               alt="user-post"
             />
@@ -83,9 +83,10 @@ function PinDetail({ user }) {
                 <a
                   href={`${pinDetail.image.asset.url}?dl=`}
                   download
-                  className="bg-secondaryColor p-2 text-xl rounded-full flex items-center justify-center text-pink-700 opacity-75 hover:opacity-100"
+                  className=" p-2 text-xl rounded-full flex items-center justify-center text-red-600 hover:text-red-700"
+                  title="Download"
                 >
-                  <MdDownloadForOffline />
+                  <BsDownload />
                 </a>
               </div>
               <a href={pinDetail.destination} target="_blank" rel="noreferrer">
@@ -137,7 +138,7 @@ function PinDetail({ user }) {
                 />
               </Link>
               <input
-                className=" flex-1 border-gray-100 outline-none border-2 p-2 rounded-2xl focus:border-gray-300"
+                className=" flex-1 border-gray-100 outline-none border-2 p-2 focus:border-gray-300"
                 type="text"
                 placeholder="Add a comment"
                 value={comment}
@@ -145,7 +146,7 @@ function PinDetail({ user }) {
               />
               <button
                 type="button"
-                className="bg-pink-700 text-white rounded-full px-6 py-2 font-semibold text-base outline-none"
+                className="bg-red-600 text-white px-6 py-2 font-semibold text-base outline-none hover:bg-red-700"
                 onClick={addComment}
               >
                 {addingComment ? "Posting comment" : "Post"}

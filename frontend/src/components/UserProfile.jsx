@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { GoogleLogout } from "react-google-login";
-import { AiOutlineLogout } from "react-icons/ai";
+import { MdLogout } from "react-icons/md";
 
 import {
   userCreatedPinsQuery,
@@ -15,9 +15,9 @@ const randomImage =
   "https://source.unsplash.com/1600x900/?Architecture,Animals,Landscapes,Fashion,Food%20&%20Drinks,Technology,People,Travel,Spirituality,Others";
 
 const activeBtnStyles =
-  "bg-pink-700 text-white font-bold p-2 rounded-full w-20 outline-none";
+  "bg-red-600 hover:bg-red-700 text-white font-bold p-2 w-20 outline-none";
 const notActiveBtnStyles =
-  "bg-primary mr-4 text-black font-bold p-2 rounded-full w-20 outline-none";
+  "bg-primary mr-4 text-black font-bold p-2 w-20 outline-none";
 
 function UserProfile() {
   const [user, setUser] = useState(null);
@@ -89,8 +89,8 @@ function UserProfile() {
                       onClick={renderProps.onClick}
                       disabled={renderProps.disabled}
                     >
-                      <AiOutlineLogout
-                        className="text-pink-700"
+                      <MdLogout
+                        className="text-red-600 hover:text-red-700"
                         fontSize={21}
                       />
                     </button>

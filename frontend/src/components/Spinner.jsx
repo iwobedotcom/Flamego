@@ -7,7 +7,7 @@ function Spinner({ message }) {
       <TailSpin
         heigth="200"
         width="200"
-        color="#DB3FA1"
+        color="#FF001E"
         arialLabel="loading"
         className="m-5"
       />

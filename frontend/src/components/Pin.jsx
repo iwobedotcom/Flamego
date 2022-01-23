@@ -59,14 +59,14 @@ function Pin({ pin: { postedBy, image, _id, destination, save } }) {
         />
         {PostHovered && (
           <div
-            className="absolute top-0 w-full h-full flex flex-col justify-between p-1 pr-2 pt-2 pb-2 z-50 bg-gradient-to-t from-gray-500 to-transparent"
+            className="absolute top-0 w-full h-full flex flex-col justify-between p-1 pr-2 pt-2 pb-2 z-50 bg-gradient-to-t from-black to-transparent"
             style={{ height: "100%" }}
           >
             <div className="flex items-center justify-between"></div>
             <div className="flex justify-between items-center gap-2 w-full">
               <Link
                 to={`user-profile/${postedBy?._id}`}
-                className="flex gap-2 mt-2 items-center"
+                className="flex gap-2 mt-2 p-3 items-center"
               >
                 <img
                   src={postedBy?.image}

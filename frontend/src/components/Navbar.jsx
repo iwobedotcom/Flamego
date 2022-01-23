@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { IoMdAdd, IoMdSearch } from "react-icons/io";
+import { GrAdd } from "react-icons/gr";
 
 function Navbar({ searchTerm, setSearchTerm, user }) {
   const navigate = useNavigate();
@@ -26,9 +27,10 @@ function Navbar({ searchTerm, setSearchTerm, user }) {
         </Link>
         <Link
           to="create-pin"
-          className="bg-black text-white rounded-lg w-12 h-12 md:w-14 md:h-12 flex justify-center items-center"
+          className="text-black rounded-lg w-12 h-12 md:w-14 md:h-12 flex justify-center items-center"
+          title="Add pin"
         >
-          <IoMdAdd />
+          <GrAdd fontSize={21} />
         </Link>
       </div>
     </div>
